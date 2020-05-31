@@ -1,0 +1,9 @@
+config:
+  target: 'LAMBDA ROOT URL'
+  phases:
+    - duration: 0.001  # DO NOT CHANGE
+      arrivalRate: 10000  # DO NOT CHANGE
+scenarios:
+  - flow:
+    - get:
+        url: "/endpoint"

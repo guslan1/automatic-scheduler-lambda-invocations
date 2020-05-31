@@ -1,0 +1,26 @@
+{
+  "name": "lambda-invocations",
+  "version": "1.0.0",
+  "description": "Invokes lambda functions on a predefined schedule to measure performance variations over time.",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "uc1": "concurrently \"artillery run uc1-serverless.yml\" \"artillery run uc1-serverless-express.yml\"",
+    "uc2": "concurrently \"artillery run uc2-serverless.yml\" \"artillery run uc2-serverless-express.yml\"",
+    "uc3": "concurrently \"artillery run uc3-serverless.yml\" \"artillery run uc3-serverless-express.yml\""
+  },
+  "keywords": [
+    "AWS",
+    "Lambda",
+    "duration",
+    "performance",
+    "measurement"
+  ],
+  "author": "Gustav Landin",
+  "license": "ISC",
+  "dependencies": {
+    "artillery": "^1.6.0",
+    "concurrently": "^5.2.0",
+    "node-schedule": "^1.3.2"
+  }
+}
